@@ -47,7 +47,7 @@ export default function Home() {
               price: 4.99,
               title: "Bow Lasagna",
               rating: 4.6,
-              isOpen: false,
+              isOpen: true,
               mainImage: sampleFoodImg,
               logoImage: sampleLogoImg,
               restaurantName: "Bow",
@@ -57,7 +57,7 @@ export default function Home() {
               price: 4.99,
               title: "Bow Lasagna",
               rating: 4.6,
-              isOpen: false,
+              isOpen: true,
               mainImage: sampleFoodImg,
               logoImage: sampleLogoImg,
               restaurantName: "Bow",
@@ -70,7 +70,9 @@ export default function Home() {
           </button>
         </div>
       </main>
-      <HomeFooter />
+      <div className="pt-12">
+        <HomeFooter />
+      </div>
     </div>
   );
 }
