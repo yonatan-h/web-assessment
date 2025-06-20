@@ -1,13 +1,9 @@
+import HomeHeader from "../components/home-header/HomeHeader";
+
 export default function Home() {
   return (
     <div className="">
-      <header className="flex justify-between p-4">
-        <a href="/">
-          <span>food</span>
-          <span>wagen</span>
-        </a>
-        <button>add meat</button>
-      </header>
+      <HomeHeader />
       <main>
         <section>
           <div>
