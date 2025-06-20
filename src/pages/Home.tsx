@@ -63,7 +63,11 @@ export default function Home() {
             },
           ]}
         />
-        <button>LoadMore</button>
+        <div className="flex justify-center">
+          <button className="px-6 py-3 text-white font-bold  bg-primary rounded-3xl">
+            LoadMore
+          </button>
+        </div>
       </main>
       <footer>
         <div>
