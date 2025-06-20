@@ -1,3 +1,4 @@
+import HeroSection from "../components/hero-section/HeroSection";
 import HomeHeader from "../components/home-header/HomeHeader";
 
 export default function Home() {
@@ -5,26 +6,7 @@ export default function Home() {
     <div className="">
       <HomeHeader />
       <main>
-        <section>
-          <div>
-            <h2>Are you starving?</h2>
-            <p>Within a few clicks, find meals that are accessible near you</p>
-            <div>
-              <div>
-                <button>Delivery</button>
-                <button>Pickup</button>
-              </div>
-              <form>
-                <input
-                  type="text"
-                  placeholder="What do you like to eat today?"
-                />
-                <button>Find A Meal</button>
-              </form>
-            </div>
-          </div>
-          <div>image</div>
-        </section>
+        <HeroSection />
         <section>
           <h2>Featured Meals</h2>
           <p>handle empty</p>
