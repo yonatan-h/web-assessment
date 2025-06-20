@@ -1,3 +1,6 @@
+import sampleFoodImg from "../assets/sample-food.png";
+import sampleLogoImg from "../assets/sample-logo.png";
+import FeaturedMeals from "../components/featured-meals/FeaturedMeals";
 import HeroSection from "../components/hero-section/HeroSection";
 import HomeHeader from "../components/home-header/HomeHeader";
 
@@ -5,49 +8,61 @@ export default function Home() {
   return (
     <div className="">
       <HomeHeader />
-      <main>
+      <main className="flex flex-col gap-12">
         <HeroSection />
-        <section>
-          <h2>Featured Meals</h2>
-          <p>handle empty</p>
-          <div>
-            <MealCard
-              price={4.99}
-              title="Bow Lasagna"
-              rating={4.6}
-              isOpen={false}
-              mainImage={
-                "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.alibaba.com%2Fproduct-detail%2FNew-Kitchen-Multifunctional-Meat-Grinder-Baby_1600982475250.html&psig=AOvVaw02Xn6RwgBscbvPsiJMjvFv&ust=1750494227767000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCODCmKfJ_40DFQAAAAAdAAAAABAE"
-              }
-              logoImage="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vexels.com%2Ficon%2Flogo-maker%2F&psig=AOvVaw1tZt28VpGXclKtP-R50FsK&ust=1750494273041000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPjTnr7J_40DFQAAAAAdAAAAABAE"
-              restaurantName="Bow"
-            />
+        <FeaturedMeals
+          meals={[
+            {
+              price: 4.99,
+              title: "Bow Lasagna",
+              rating: 4.6,
+              isOpen: false,
+              mainImage: sampleFoodImg,
+              logoImage: sampleLogoImg,
+              restaurantName: "Bow",
+            },
 
-            <MealCard
-              price={4.99}
-              title="Bow Lasagna"
-              rating={4.6}
-              isOpen={false}
-              mainImage={
-                "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.alibaba.com%2Fproduct-detail%2FNew-Kitchen-Multifunctional-Meat-Grinder-Baby_1600982475250.html&psig=AOvVaw02Xn6RwgBscbvPsiJMjvFv&ust=1750494227767000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCODCmKfJ_40DFQAAAAAdAAAAABAE"
-              }
-              logoImage="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vexels.com%2Ficon%2Flogo-maker%2F&psig=AOvVaw1tZt28VpGXclKtP-R50FsK&ust=1750494273041000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPjTnr7J_40DFQAAAAAdAAAAABAE"
-              restaurantName="Bow"
-            />
+            {
+              price: 4.99,
+              title: "Bow Lasagna",
+              rating: 4.6,
+              isOpen: false,
+              mainImage: sampleFoodImg,
+              logoImage: sampleLogoImg,
+              restaurantName: "Bow",
+            },
 
-            <MealCard
-              price={4.99}
-              title="Bow Lasagna"
-              rating={4.6}
-              isOpen={false}
-              mainImage={
-                "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.alibaba.com%2Fproduct-detail%2FNew-Kitchen-Multifunctional-Meat-Grinder-Baby_1600982475250.html&psig=AOvVaw02Xn6RwgBscbvPsiJMjvFv&ust=1750494227767000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCODCmKfJ_40DFQAAAAAdAAAAABAE"
-              }
-              logoImage="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vexels.com%2Ficon%2Flogo-maker%2F&psig=AOvVaw1tZt28VpGXclKtP-R50FsK&ust=1750494273041000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPjTnr7J_40DFQAAAAAdAAAAABAE"
-              restaurantName="Bow"
-            />
-          </div>
-        </section>
+            {
+              price: 4.99,
+              title: "Lasagna Burger",
+              rating: 5,
+              isOpen: true,
+              mainImage: sampleFoodImg,
+              logoImage: sampleLogoImg,
+              restaurantName: "Bow",
+            },
+
+            {
+              price: 4.99,
+              title: "Bow Lasagna",
+              rating: 4.6,
+              isOpen: false,
+              mainImage: sampleFoodImg,
+              logoImage: sampleLogoImg,
+              restaurantName: "Bow",
+            },
+
+            {
+              price: 4.99,
+              title: "Bow Lasagna",
+              rating: 4.6,
+              isOpen: false,
+              mainImage: sampleFoodImg,
+              logoImage: sampleLogoImg,
+              restaurantName: "Bow",
+            },
+          ]}
+        />
         <button>LoadMore</button>
       </main>
       <footer>
@@ -127,42 +142,6 @@ function FooterColumn({
           );
         })}
       </li>
-    </div>
-  );
-}
-
-interface Meal {
-  price: number;
-  title: string;
-  rating: number;
-  isOpen: boolean;
-  mainImage: string;
-  logoImage: string;
-  restaurantName: string;
-}
-function MealCard({
-  price,
-  title,
-  rating,
-  isOpen,
-  mainImage,
-  logoImage,
-  restaurantName,
-}: Meal) {
-  return (
-    <div className="relative">
-      <div className="absolute top-3 left-3">
-        <span>{price}</span>
-      </div>
-      <img src={mainImage} alt={title} />
-      <div>
-        <img src={logoImage} alt={`${restaurantName}`} />
-        <div>
-          <h3>{title}</h3>
-          <span>{rating}</span>
-        </div>
-      </div>
-      <div>{isOpen ? <span>Open</span> : <span>Closed</span>}</div>
     </div>
   );
 }
